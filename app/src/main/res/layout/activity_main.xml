@@ -46,7 +46,7 @@
                     android:layout_weight="1"
                     android:contentDescription="Pralka"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pralka" android:visibility="invisible"/>
+                    android:src="@drawable/pralka" android:visibility="visible"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -117,7 +117,7 @@
                     android:layout_weight="1"
                     android:contentDescription="Odkurzacz"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/odkurzacz" android:visibility="invisible"/>
+                    android:src="@drawable/odkurzacz" android:visibility="visible"/>
 
             <LinearLayout
                 android:layout_width="0dp"
