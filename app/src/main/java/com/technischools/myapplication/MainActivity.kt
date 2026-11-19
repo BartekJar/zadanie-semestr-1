@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.widget.doAfterTextChanged
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,11 +26,25 @@ class MainActivity : AppCompatActivity() {
         val washNumberStatus = findViewById<TextView>(R.id.washNumberStatus)
         val confirmWashButton = findViewById<Button>(R.id.confirmWashButton)
 
+        fun showWashKeyboard() {
+            washNumberInput.requestFocus()
+            washNumberInput.post {
+                WindowInsetsControllerCompat(window, washNumberInput)
+                    .show(WindowInsetsCompat.Type.ime())
+            }
+        }
+
+        washNumberInput.setOnClickListener { showWashKeyboard() }
+
+        washNumberInput.doAfterTextChanged {
+            washNumberInput.error = null
+        }
+
         confirmWashButton.setOnClickListener {
             val washNumber = washNumberInput.text.toString().toIntOrNull()
             if (washNumber == null || washNumber !in 1..12) {
                 washNumberInput.error = getString(R.string.wash_number_error)
-                washNumberInput.requestFocus()
+                showWashKeyboard()
             } else {
                 washNumberInput.error = null
                 washNumberStatus.text = getString(R.string.wash_number_selected, washNumber)
