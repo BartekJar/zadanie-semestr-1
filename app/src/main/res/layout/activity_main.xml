@@ -18,16 +18,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="Urządzenia Domowe"
             android:textColor="@color/navy"
-            android:textSize="26sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:text="Autor: 000000000000"
             android:textColor="@color/navy"
@@ -35,17 +37,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:contentDescription="Pralka"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/pralka" android:visibility="visible"/>
 
             <LinearLayout
@@ -57,7 +58,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="5dp"
                     android:text="Pralka"
                     android:textColor="@color/navy"
                     android:textSize="20sp" />
@@ -70,7 +71,6 @@
                     android:hint="Podaj nr prania 1..12"
                     android:inputType="number"
                     android:maxLength="2"
-                    android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     android:singleLine="true"
                     android:textColor="@color/navy"
@@ -81,12 +81,13 @@
                     android:id="@+id/confirmWashButton"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="8dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
                     android:backgroundTint="@color/royal_blue"
                     android:minHeight="0dp"
                     android:minWidth="0dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
                     android:text="Zatwierdź"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -96,7 +97,6 @@
                     android:id="@+id/washNumberStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
                     android:text="Numer prania: nie podano"
                     android:textColor="@color/navy"
                     android:textSize="14sp" />
@@ -104,62 +104,63 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
             <ImageView
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_weight="1"
+                    android:layout_marginEnd="20dp"
                     android:contentDescription="Odkurzacz"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/odkurzacz" android:visibility="visible"/>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.25"
-                android:orientation="vertical">
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.25"
+                    android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
-                    android:text="Odkurzacz"
-                    android:textColor="@color/navy"
-                    android:textSize="20sp" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Odkurzacz"
+                        android:textColor="@color/navy"
+                        android:textSize="20sp"/>
 
                 <Button
-                    android:id="@+id/vacuumToggleButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:backgroundTint="@color/royal_blue"
-                    android:minHeight="0dp"
-                    android:minWidth="0dp"
-                    android:text="Włącz"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
+                        android:id="@+id/vacuumToggleButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/royal_blue"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:text="Włącz"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
 
                 <TextView
-                    android:id="@+id/vacuumStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Odkurzacz wyłączony"
-                    android:textColor="@color/navy"
-                    android:textSize="14sp" />
+                        android:id="@+id/vacuumStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Odkurzacz wyłączony"
+                        android:textColor="@color/navy"
+                        android:textSize="14sp"/>
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Status: naładowany"
-                    android:textColor="@color/navy"
-                    android:textSize="14sp" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Status: naładowany"
+                        android:textColor="@color/navy"
+                        android:textSize="14sp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
