@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Urządzenia Domowe</string>
+    <string name="wash_number_selected">Numer prania: %1$d</string>
+    <string name="wash_number_error">Podaj numer od 1 do 12</string>
+    <string name="turn_on">Włącz</string>
+    <string name="turn_off">Wyłącz</string>
+    <string name="vacuum_on">Odkurzacz włączony</string>
+    <string name="vacuum_off">Odkurzacz wyłączony</string>
 </resources>
